@@ -1,10 +1,10 @@
-FROM openjdk:17-jdk-slim
+\FROM eclipse-temurin:17-jdk-jammy
 
-WORKDIR /app
+ WORKDIR /app
 
-COPY . .
+ COPY . .
 
-RUN chmod +x mvnw
-RUN ./mvnw clean package
+ RUN chmod +x mvnw
+ RUN ./mvnw clean package
 
-CMD ["java", "-jar", "target/*.jar"]
+ CMD ["java", "-jar", "target/*.jar"]
